@@ -8,6 +8,17 @@ export const store = createStore({
     jobs: [],
     asks: [],
   },
+  getters: {
+    newsList(state) {
+      return state.news;
+    },
+    jobsList(state) {
+      return state.jobs;
+    },
+    askList(state) {
+      return state.asks;
+    },
+  },
   mutations: {
     SET_NEWS(state, payload) {
       state.news = payload;
